@@ -1,0 +1,31 @@
+{
+  "messages": {
+    "tts": {
+      "auto": "inbound",
+      "provider": "openai",
+      "timeoutMs": 60000,
+      "maxTextLength": 2000,
+      "providers": {
+        "openai": {
+          "apiKey": "local-piper",
+          "baseUrl": "http://127.0.0.1:8765/v1",
+          "model": "tts-1",
+          "voice": "ona"
+        },
+        "microsoft": {
+          "enabled": false
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "ollama": {
+        "enabled": true
+      },
+      "bonjour": {
+        "enabled": false
+      }
+    }
+  }
+}
