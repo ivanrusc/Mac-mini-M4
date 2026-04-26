@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.openclaw.piper-tts-api</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/ivan/.openclaw/venvs/piper/bin/python</string>
+      <string>-m</string>
+      <string>uvicorn</string>
+      <string>piper_openai_tts_api:app</string>
+      <string>--app-dir</string>
+      <string>/Users/ivan/.openclaw/bin</string>
+      <string>--host</string>
+      <string>127.0.0.1</string>
+      <string>--port</string>
+      <string>8765</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+      <key>PIPER_PY</key>
+      <string>/Users/ivan/.openclaw/venvs/piper/bin/python</string>
+      <key>PIPER_VOICE_DIR</key>
+      <string>/Users/ivan/.openclaw/tools/piper/voices</string>
+      <key>PIPER_DEFAULT_VOICE</key>
+      <string>ca_ES-upc_ona-medium</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/ivan/.openclaw/logs/piper-tts-api.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/ivan/.openclaw/logs/piper-tts-api.err.log</string>
+  </dict>
+</plist>
